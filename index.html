@@ -38,6 +38,11 @@
   .steps { color: var(--muted); font-size: 0.9rem; line-height: 1.7; }
   .steps b { color: var(--text); }
   ul.features { color: var(--muted); font-size: 0.92rem; line-height: 1.75; padding-left: 1.1rem; margin: 0; }
+  ul.features b { color: var(--text); font-weight: 600; }
+  .card h2 {
+    font-size: 0.78rem; text-transform: uppercase; letter-spacing: 0.12em;
+    color: var(--muted); margin: 0 0 1rem; font-weight: 600;
+  }
   footer { color: var(--muted); font-size: 0.8rem; text-align: center; margin-top: 2rem; }
   a.plain { color: var(--accent); }
 </style>
@@ -57,12 +62,21 @@
   </div>
 
   <div class="card">
+    <h2>Contrôle</h2>
     <ul class="features">
-      <li>Une grille de touches servie à l'iPad sur le réseau local</li>
-      <li>Chaque touche déclenche un raccourci, une app ou une commande</li>
-      <li>Configuration par un simple fichier config.json</li>
-      <li>Vit dans la barre de menu, sans icône dans le Dock</li>
+      <li><b>7 pages, 84 boutons</b> — une grille de touches servie à l'iPad depuis le Mac sur le réseau local, sans app à installer côté iPad (juste un navigateur).</li>
+      <li><b>La page suit l'app active</b> — change automatiquement de page selon l'app au premier plan sur le Mac.</li>
+      <li><b>Vraies frappes clavier</b> — chaque bouton déclenche un raccourci en postant un évènement clavier réel, pas un script <code>osascript</code>.</li>
+    </ul>
+  </div>
 
+  <div class="card">
+    <h2>Réseau &amp; configuration</h2>
+    <ul class="features">
+      <li><b>QR code de connexion</b> — généré nativement, à scanner depuis l'iPad pour se connecter sans taper d'adresse IP.</li>
+      <li><b>Accès protégé par jeton</b> — chaque requête est vérifiée, contrairement à une version antérieure du projet qui n'authentifiait rien.</li>
+      <li><b>Configuration par fichier</b> — pages et boutons se définissent dans un simple <code>config.json</code>, sans interface de configuration à part.</li>
+      <li><b>Vit dans la barre de menu</b> — aucune icône dans le Dock.</li>
     </ul>
   </div>
 
